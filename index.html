@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
         var markers = [
     ['Bondi Beach', -33.890542, 151.274856],
@@ -23,21 +23,20 @@
     ['Maroubra Beach', -33.950198, 151.259302]
 ];
 
+
 function initializeMaps() {
+    var latlng = new google.maps.LatLng(-33.92, 151.25);
     var myOptions = {
+        zoom: 10,
+        center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false
     };
     var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
-    var infowindow = new google.maps.InfoWindow(); 
-    var marker, i;
-    var bounds = new google.maps.LatLngBounds();
-
-    for (i = 0; i < markers.length; i++) { 
-        var pos = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        bounds.extend(pos);
+    var infowindow = new google.maps.InfoWindow(), marker, i;
+    for (i = 0; i < markers.length; i++) {  
         marker = new google.maps.Marker({
-            position: pos,
+            position: new google.maps.LatLng(markers[i][1], markers[i][2]),
             map: map
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -45,10 +44,12 @@ function initializeMaps() {
                 infowindow.setContent(markers[i][0]);
                 infowindow.open(map, marker);
             }
-        }
-    })(marker, i));
-    map.fitBounds(bounds);
+        })(marker, i));
+    }
 }
+</script>
+        
+        
 </script>
 	<body class="homepage">
 		<div id="page-wrapper">
