@@ -13,6 +13,23 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+        function initialize() {
+          var mapProp = {
+            center:new google.maps.LatLng(41.628102,0.598237),
+            zoom:12,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		  var marker = new google.maps.Marker({
+    			position: {lat: 41.628102, lng: 0.598237},
+               map: map,
+              title: "Edif.A.1.06.2"
+          });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 	<body class="homepage">
 		<div id="page-wrapper">
 
@@ -512,6 +529,9 @@
 										<header>
 											<h3>Nisl turpis nascetur interdum?</h3>
 										</header>
+										<div id="googleMap" align="center" style="width:400px;height:300px;"></div>
+          										</ul>
+          									</div>
 										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
 										<ul class="icons">
 											<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
