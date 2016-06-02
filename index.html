@@ -22,8 +22,12 @@
             mapTypeId:google.maps.MapTypeId.ROADMAP
           };
           var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		  var marker = new google.maps.Marker({
-    			position: {lat: 41.628102, lng: 0.598237},
+		  <!--var marker = new google.maps.Marker({
+    			position: {lat: 41.628102, lng: 0.598237},-->
+    			var markers = [
+      ['UdL', 41.628102, 0.598237],
+      ['CTFC', 42.011055, 1.519631],
+      ];
                map: map,
               title: "Edif.A.1.06.2"
           });
@@ -463,7 +467,7 @@
 									</ul>
 								</section>
 
-							<!-- Photos -->
+							<!-- Photos 
 								<section class="4u 12u(mobile)">
 									<header>
 										<h2 class="icon fa-camera circled"><span class="label">Photos</span></h2>
@@ -471,7 +475,7 @@
 										<div id="googleMap" align="center" style="width:400px;height:300px;"></div>
           										</ul>
           									</div>
-								</section>
+								</section>-->
 
 						</div>
 						<hr />
@@ -485,7 +489,7 @@
 										</header>
 									
           									
-          									42.011079, 1.519331
+          									
 										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
 										<ul class="icons">
 											<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
