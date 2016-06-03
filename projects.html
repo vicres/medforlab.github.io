@@ -13,23 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-        <script>
-        function initialize() {
-          var mapProp = {
-            center:new google.maps.LatLng(41.628102,0.598237),
-            zoom:12,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-          };
-          var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		  var marker = new google.maps.Marker({
-    			position: {lat: 41.628102, lng: 0.598237},
-               map: map,
-              title: "Edif.A.1.06.2"
-          });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
+
 	<body class="no-sidebar">
 		<div id="page-wrapper">
 
@@ -184,8 +168,10 @@
 				<!-- Footer -->
 				<div id="footer">
 					<div class="container">
-						<div class="row">
-							<!-- Location -->
+						
+						<a href="index.html" class="icon fa-home circled"></a>
+						<!--div class="row">
+							<!-- Location>
 								<section class="4u 12u(mobile)">
 									<header>
 										<h2 class="icon fa-car circled"><span class="label">Photos</span></h2>
@@ -201,7 +187,7 @@
 									</div>
 								</section>
 							<!-- Posts-->
-								<section class="4u 12u(mobile)">
+								<!--section class="4u 12u(mobile)">
 									<header>
 										<a href="#" class="icon fa-home circled"></a>
 									</header>
@@ -238,11 +224,11 @@
 												<span class="timestamp">2 days ago</span>
 											</article>
 										</li>
-									</ul>-->
-								</section>
+									</ul>>
+								</section-->
 
 								<!-- Tweets -->
-								<section class="4u 12u(mobile)">
+								<!--section class="4u 12u(mobile)">
 									<header>
 										<a href="https://twitter.com/MedForLab" class="icon fa-twitter circled"></a>
 									</header>
@@ -272,8 +258,8 @@
 												<span class="timestamp">5 hours ago</span>
 											</article>
 										</li>
-									</ul-->
-								</section>
+									</ul>
+								</section-->
 						</div>
 						<hr />
 						<div class="row">
@@ -305,7 +291,7 @@
 
 							</div>
 
-						</div>
+						</div-->
 					</div>
 				</div>
 
