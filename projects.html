@@ -13,6 +13,23 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+        function initialize() {
+          var mapProp = {
+            center:new google.maps.LatLng(41.628102,0.598237),
+            zoom:12,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
+          var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		  var marker = new google.maps.Marker({
+    			position: {lat: 41.628102, lng: 0.598237},
+               map: map,
+              title: "Edif.A.1.06.2"
+          });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
 
